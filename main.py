@@ -1,4 +1,5 @@
 # main.py
+from requests import RequestException
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
 from routers.image_router import router as image_router
@@ -21,7 +22,7 @@ def form():
     </head>
     <body>
         <h1>Upload Image to FastAPI</h1>
-        <form action="/analyze-image/" method="post" enctype="multipart/form-data">
+        <form action="/analyze-image/hello" method="post" enctype="multipart/form-data">
             <input type="file" name="file">
             <input type="submit">
         </form>
