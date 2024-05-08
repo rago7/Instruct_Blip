@@ -6,11 +6,11 @@
 # model = InstructBlipForConditionalGeneration.from_pretrained("Salesforce/instructblip-vicuna-7b")
 # processor = InstructBlipProcessor.from_pretrained("Salesforce/instructblip-vicuna-7b")
 
-# device = "cuda" if torch.cuda.is_available() else "cpu"
+# device = "cpu" if torch.cuda.is_available() else "cpu"
 # model.to(device)
-# url = "https://raw.githubusercontent.com/salesforce/LAVIS/main/docs/_static/Confusing-Pictures.jpg"
-# image = Image.open(requests.get(url, stream=True).raw).convert("RGB")
-# prompt = "What is unusual about this image?"
+# # url = "https://images.app.goo.gl/6wFawxpZJ1EYm34FA"
+# image = Image.open(r"C:\Users\Project\Desktop\Docs\my_project\images\img2.png")
+# prompt = "What do you understand by this image?"
 # inputs = processor(images=image, text=prompt, return_tensors="pt").to(device)
 # print("prompt2")
 # outputs = model.generate(
